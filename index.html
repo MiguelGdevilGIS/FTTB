@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Geovisor FTTB BANTEL</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <!-- Agregar barra de búsqueda -->
+        <div id="searchContainer">  
+            <input type="text" id="searchInput" placeholder="Buscar ubicación">
+            <button id="searchButton">Buscar</button>
+        </div>
+        <!-- Selector de mapas base -->
+        <div id="mapSelector">
+            <label for="baseMapSelect">Seleccionar mapa base:</label>
+            <select id="baseMapSelect">
+                <option value="osm">OpenStreetMap</option>
+                <option value="google">Google Maps</option>
+            </select>
+        </div>
+        <!-- Botón de mostrar/ocultar mapa -->
+        <button id="toggleMapButton" class="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </header>
+    <main>
+        <p class="help">Click on the icon to browse and load local files on the map.</p>
+        <div id="map" style="width: 100%; height: 100%; display: block;"></div>
+        <!-- Añadir el logotipo dentro del mapa (las coordenadas y estilos se definirán en CSS) -->
+        <img id="mapLogo" src="recursos/logobantel.png" alt="Logotipo Bantel">   
+    </main>
+ 
+    <!-- Coloca tu clave de API de Google Maps en la siguiente línea -->
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_FqWyG3HuR2Xxa5shA1Kal0aZHFjOz6w&callback=inicializarMapa&libraries=maps,marker&v=beta"></script>
+
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/togeojson@0.16.0"></script>
+    <script src="https://unpkg.com/leaflet-filelayer@1.2.0"></script>
+    <script src="menu.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

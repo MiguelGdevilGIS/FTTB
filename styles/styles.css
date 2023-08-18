@@ -1,0 +1,107 @@
+/* Estilos base */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal */
+#container {
+    position: relative;
+    height: 100vh;
+}
+
+/* Mapa */
+#map {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* Encabezado */
+#header {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+/* Barra de búsqueda y botón */
+#searchContainer {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+#searchInput {
+    width: 250px;
+    margin-right: 5px;
+}
+
+/* Botón Mostrar Mapa */
+#toggleMapButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+/* Botón Cargar KMZ/KML */
+#fileUploadContainer {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+#fileInput {
+    display: none;
+}
+
+#fileUploadButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Logo */
+#logo {
+    position: absolute;
+    top: 25px;
+    right: 10px;
+    z-index: 1000;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    #header,
+    #searchContainer,
+    #toggleMapButton,
+    #fileUploadContainer,
+    #logo {
+        position: static;
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    #searchContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
